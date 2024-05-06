@@ -1,0 +1,35 @@
+{
+  "name": "hammock",
+  "version": "1.0.0",
+  "description": "Text-based social media app. Staying connected without the noise~",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rennacarver/Hammock.git"
+  },
+  "keywords": [
+    "social",
+    "media",
+    "hammock",
+    "text-based",
+    "minimalism"
+  ],
+  "author": "Renna Carver",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rennacarver/Hammock/issues"
+  },
+  "homepage": "https://github.com/rennacarver/Hammock#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.3.4",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
