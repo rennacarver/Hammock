@@ -1,6 +1,6 @@
 const express = require('express')
 const logger = require('morgan')
-const path = require('path')
+//const path = require('path')
 const passport = require('passport')
 
 //added without inspection
@@ -21,13 +21,15 @@ app.use(cookieParser());
 app.use(logger('dev'))
 
 //create route for public folder
-app.use('/static', express.static(path.join(__dirname, 'public')))
+//app.use('/static', express.static(path.join(__dirname, 'public')))
+//app.use('/static', express.static('public'))
+app.use(express.static('public'))
 
 //routes for root page
 app.use('/', require('./routes/index'))
 app.use('/', require('./routes/auth'))
 
-//error handling (uninspected)
+// error handling (uninspected)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -41,7 +43,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json('error');
 });
 
 
